@@ -16,7 +16,7 @@ def update(args):
 
 
 def main():
-    logging.baseConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO)
     createUser = sdk.Job("Create user", "Create a user with args", create)
     updateUser = sdk.Job("Update user", "Updates the user with args", update, ["Create user"])
     sdk.serve([createUser, updateUser])
